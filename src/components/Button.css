@@ -1,0 +1,62 @@
+button {
+    cursor: pointer;
+}
+
+.LikeButton {
+    display: inline-block;
+    width: 60px;
+    padding: 10px;
+    color: #fff;
+    border-radius: 5px;
+    border: none;
+    transition: background-color .2s;
+    background-color: #9500ff;
+    margin-right: 10px;
+    margin-left: 40px;
+}
+
+.LikeButton:hover {
+    background-color: #7600ca;  
+}
+
+.LikeButton.active {
+    background-color: #7600ca;    
+    position: relative;
+}
+
+.LikeButton.active::before {
+    position: absolute;
+    content: url(../img/hearts-svgrepo-com.svg);
+    left: -20px;
+    top: 25%;
+    transform: translateX(-50%);
+    width: 20px;
+    height: 20px;
+}
+
+.DeleteButton {
+    display: inline-block;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: rgb(218, 103, 103);
+    transition: background-color .2s;
+}
+
+.DeleteButton:hover {
+    background-color: rgb(211, 45, 45);
+}
+
+.input__btn {
+    padding: 10px;
+    color: #fff;
+    border-radius: 5px;
+    border: none;
+    background-color: #9500ff;
+    transition: background-color .2s;
+}
+
+.input__btn:hover {
+    background-color: #7600ca;
+}

@@ -1,0 +1,16 @@
+.song__list {
+    margin-bottom: 20px;
+}
+
+.song__description {
+    display: flex;
+    padding: 10px 0;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #444;
+}
+
+.song__description p {
+    font-weight: bold;
+    width: 150px;
+    margin-right: 20px;
+}

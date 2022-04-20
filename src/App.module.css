@@ -1,0 +1,11 @@
+.App {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: rgb(247, 245, 245);
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: 2px 2px 5px rgb(148, 146, 146);
+}
+
+.App h2 {
+  text-align: center;
+}
