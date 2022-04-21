@@ -1,0 +1,20 @@
+.InputForm {
+    padding: 20px 0;
+}
+
+.Input {
+    padding: 10px;
+    margin-right: 10px;
+    border-radius: 5px;
+    border: 1px solid #888;
+}
+
+.Input[empty="true"]:focus {
+    border: 1px solid red;
+    outline: 1px solid red;
+}
+
+.Input[empty="false"]:focus {
+    border: 1px solid green;
+    outline: 1px solid green;
+}

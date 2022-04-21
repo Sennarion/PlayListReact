@@ -1,9 +1,9 @@
-.counter {
+.Counter {
     display: flex;
     justify-content: space-between;
 }
 
-.counter strong {
+.Counter strong {
     display: inline-block;
     padding: 5px 10px;
     color: #fff;

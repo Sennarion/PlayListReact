@@ -1,16 +1,16 @@
-.song__item {
+.SongItem {
     padding: 10px 0;
     display: flex;
     border-bottom: 1px solid #999;
 }
 
-.song__item p {
+.SongItem p {
     display: flex;
     align-items: center;
     width: 150px;
     margin-right: 20px;
 }
 
-.buttons__wrapper {
+.Buttons {
     margin-left: auto;
 }

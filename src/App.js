@@ -7,6 +7,31 @@ import classes from './App.module.css';
 
 function App() {
   const [songs, setSongs] = useState(songList);
+  const [song, setSong] = useState({
+    songName: '',
+    songRelease: '',
+    songAuthor: '',
+    songAlbum: ''
+  });
+
+  function addNewSong(e) {
+    e.preventDefault();
+    if (song.songName && song.songAuthor && song.songRelease && song.songAlbum) {
+      setSongs([...songs, {
+        id: generateId(),
+        songName: song.songName,
+        releaseDate: song.songRelease,
+        author: song.songAuthor,
+        albumName: song.songAlbum
+      }]);
+      setSong({
+        songName: '',
+        songRelease: '',
+        songAuthor: '',
+        songAlbum: ''
+      })
+    }
+  }
 
   function generateId() {
     if (songs.length) {
@@ -22,7 +47,7 @@ function App() {
   function likeSong(id) {
     setSongs(songs.map(song => {
       if (id === song.id) {
-        return {...song, isLiked: !song.isLiked}
+        return { ...song, isLiked: !song.isLiked }
       }
       return song;
     }))
@@ -32,9 +57,9 @@ function App() {
     <div className={classes.App}>
       <h2>PlayList</h2>
       <Input
-        songs={songs}
-        setSongs={setSongs}
-        generateId={generateId}
+        song={song}
+        setSong={setSong}
+        addNewSong={addNewSong}
       />
       <SongList
         songs={songs}

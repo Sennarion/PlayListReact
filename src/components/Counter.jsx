@@ -1,10 +1,10 @@
-import './Counter.css';
+import counterClasses from './Counter.module.css';
 
 function Counter({ songs }) {
-    let likedSongs = songs.filter(song => song.isLiked === true);
+    const likedSongs = songs.filter(song => song.isLiked);
 
     return (
-        <div className="counter">
+        <div className={counterClasses.Counter}>
             <p>Count of songs: <strong>{songs.length}</strong></p>
             <p>Count of songs you liked: <strong>{likedSongs.length}</strong></p>
         </div>

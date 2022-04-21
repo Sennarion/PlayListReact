@@ -1,22 +1,24 @@
-import './SongItem.css';
 import Button from './Button';
+import buttonClasses from './Button.module.css';
+import songItemClasses from './SongItem.module.css';
 
 function SongItem({ song, deleteSong, likeSong }) {
 
     return (
-        <div className="song__item">
+        <div className={songItemClasses.SongItem}>
             <p>{song.songName}</p>
             <p>{song.author}</p>
             <p>{song.releaseDate}</p>
             <p>{song.albumName}</p>
-            <div className="buttons__wrapper">
+            <div className={songItemClasses.Buttons}>
                 <Button
-                    className={song.isLiked ? 'LikeButton active' : 'LikeButton'}
+                    liked={song.isLiked ? 'true' : 'false'}
+                    className={buttonClasses.LikeButton}
                     onClick={() => likeSong(song.id)}>
                     {!song.isLiked ? 'Like' : 'Dislike'}
                 </Button>
                 <Button 
-                    className='DeleteButton' 
+                    className={buttonClasses.DeleteButton}
                     onClick={() => deleteSong(song.id)}>
                     Delete
                 </Button>

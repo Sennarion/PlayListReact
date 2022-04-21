@@ -1,30 +1,30 @@
 button {
     cursor: pointer;
+    display: inline-block;
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px;
+    border: none;
+    transition: background-color .2s;
 }
 
 .LikeButton {
-    display: inline-block;
     width: 60px;
-    padding: 10px;
-    color: #fff;
-    border-radius: 5px;
-    border: none;
-    transition: background-color .2s;
     background-color: #9500ff;
     margin-right: 10px;
     margin-left: 40px;
 }
 
 .LikeButton:hover {
-    background-color: #7600ca;  
+    background-color: #7600ca;
 }
 
-.LikeButton.active {
-    background-color: #7600ca;    
+.LikeButton[liked="true"] {
+    background-color: #7600ca;
     position: relative;
 }
 
-.LikeButton.active::before {
+.LikeButton[liked="true"]:before {
     position: absolute;
     content: url(../img/hearts-svgrepo-com.svg);
     left: -20px;
@@ -35,28 +35,17 @@ button {
 }
 
 .DeleteButton {
-    display: inline-block;
-    color: #fff;
-    padding: 10px;
-    border-radius: 5px;
-    border: none;
     background-color: rgb(218, 103, 103);
-    transition: background-color .2s;
 }
 
 .DeleteButton:hover {
     background-color: rgb(211, 45, 45);
 }
 
-.input__btn {
-    padding: 10px;
-    color: #fff;
-    border-radius: 5px;
-    border: none;
+.InputButton {
     background-color: #9500ff;
-    transition: background-color .2s;
 }
 
-.input__btn:hover {
+.InputButton:hover {
     background-color: #7600ca;
 }
