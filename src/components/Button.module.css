@@ -5,7 +5,7 @@ button {
     border-radius: 5px;
     padding: 10px;
     border: none;
-    transition: background-color .2s;
+    transition: .2s;
 }
 
 .LikeButton {
@@ -43,7 +43,13 @@ button {
 }
 
 .InputButton {
+    background-color: #979797;
+    opacity: .4;
+}
+
+.InputButton[active="true"] {
     background-color: #9500ff;
+    opacity: 1;
 }
 
 .InputButton:hover {

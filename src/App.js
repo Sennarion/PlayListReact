@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { songList } from './songs';
 import SongList from './components/SongList';
 import Input from './components/Input';
@@ -13,6 +13,19 @@ function App() {
     songAuthor: '',
     songAlbum: ''
   });
+
+  const LOCAL_STORAGE_KEY = 'PlayListApp';
+
+  useEffect(() => {
+    const storedSongs = JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY));
+    if (storedSongs) {
+      setSongs(storedSongs)
+    }
+  }, [])
+
+  useEffect(() => {
+    localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(songs))
+  }, [songs])
 
   function addNewSong(e) {
     e.preventDefault();
@@ -57,6 +70,7 @@ function App() {
     <div className={classes.App}>
       <h2>PlayList</h2>
       <Input
+        songs={songs}
         song={song}
         setSong={setSong}
         addNewSong={addNewSong}
