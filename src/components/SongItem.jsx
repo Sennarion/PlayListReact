@@ -12,10 +12,10 @@ function SongItem({ song, deleteSong, likeSong }) {
             <p>{song.albumName}</p>
             <div className={songItemClasses.Buttons}>
                 <Button
-                    liked={song.isLiked ? 'true' : 'false'}
+                    liked={String(Boolean(song.isLiked))}
                     className={buttonClasses.LikeButton}
                     onClick={() => likeSong(song.id)}>
-                    {!song.isLiked ? 'Like' : 'Dislike'}
+                    {song.isLiked ? 'Dislike' : 'Like'}
                 </Button>
                 <Button 
                     className={buttonClasses.DeleteButton}
