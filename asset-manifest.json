@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/PlayListReact/static/css/main.d5797a7a.css",
-    "main.js": "/PlayListReact/static/js/main.67b13337.js",
+    "main.css": "/PlayListReact/static/css/main.dba256ff.css",
+    "main.js": "/PlayListReact/static/js/main.7068f573.js",
     "static/media/hearts-svgrepo-com.svg": "/PlayListReact/static/media/hearts-svgrepo-com.bd52136e1bf5fe3637b9.svg",
     "index.html": "/PlayListReact/index.html",
-    "main.d5797a7a.css.map": "/PlayListReact/static/css/main.d5797a7a.css.map",
-    "main.67b13337.js.map": "/PlayListReact/static/js/main.67b13337.js.map"
+    "main.dba256ff.css.map": "/PlayListReact/static/css/main.dba256ff.css.map",
+    "main.7068f573.js.map": "/PlayListReact/static/js/main.7068f573.js.map"
   },
   "entrypoints": [
-    "static/css/main.d5797a7a.css",
-    "static/js/main.67b13337.js"
+    "static/css/main.dba256ff.css",
+    "static/js/main.7068f573.js"
   ]
 }
